@@ -1,0 +1,22 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "This is a Blog app with the basic functionality such as creating post, deleting the post, edit and save the posts. The posts will be displayed on the homepage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaheemKhan0/BlogWebApp.git"
+  },
+  "keywords": [
+    "Muhammad"
+  ],
+  "author": "Muhammad Raheem Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaheemKhan0/BlogWebApp/issues"
+  },
+  "homepage": "https://github.com/RaheemKhan0/BlogWebApp#readme"
+}
