@@ -1,32 +1,40 @@
 <%- include("partials/navbar.ejs") %>
 
+  <header class="bg-white shadow">
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      <h1 class="text-center text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+    </div>
+  </header>
+
+
   <div class="header mb-10">
     <h1 class="text-gray-800 text-center text-3xl font-bold mt-5">Enter your Comments Below</h1>
   </div>
 
-<div id="Form-Container">
-  <form class="flex flex-col justify-center items-center">
+  <div id="Form-Container">
+    <form class="flex flex-col justify-center items-center">
 
-    <!-- Subject Input -->
-    <div class="my-3 w-2/5">
-      <input type="text" name="Subject" placeholder="Subject"
-        class="w-full rounded-lg block my-3 border-gray-300">
-    </div>
-    
-    <!-- Body Textarea -->
-    <textarea name="Body" class="w-2/5 h-60 rounded-lg block mx-auto text-left border-gray-300 p-2 resize-none"
-      placeholder="Body"></textarea>
+      <!-- Subject Input -->
+      <div class="my-3 w-2/5">
+        <input type="text" name="Subject" placeholder="Subject" class="w-full rounded-lg block my-3 border-gray-300">
+      </div>
 
-    <!-- Submit Button -->
-    <input type="submit" name="submit" value="Submit"
-      class="mx-auto bg-gray-800 hover:bg-gray-600 text-white rounded transition duration-300 my-5 py-2 px-3">
+      <!-- Body Textarea -->
+      <textarea name="Body" class="w-2/5 h-60 rounded-lg block mx-auto text-left border-gray-300 p-2 resize-none"
+        placeholder="Body"></textarea>
 
-  </form>
-</div>
+      <!-- Submit Button -->
+      <input type="submit" name="submit" value="Post"
+        class="mx-auto bg-gray-800 hover:bg-gray-600 text-white rounded transition duration-300 my-5 py-2 px-3">
+
+    </form>
+  </div>
 
   </main>
 
+  <div class="d-flex flex-column min-vh-50 mt-5">
 
 
 
-  <%- include("partials/footer.ejs") %>
+
+    <%- include("partials/footer.ejs") %>
