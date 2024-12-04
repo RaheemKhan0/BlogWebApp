@@ -12,16 +12,16 @@
   </div>
 
   <div id="Form-Container">
-    <form class="flex flex-col justify-center items-center">
+    <form class="flex flex-col justify-center items-center" action="Posts" method="post">
 
       <!-- Subject Input -->
       <div class="my-3 w-2/5">
-        <input type="text" name="Subject" placeholder="Subject" class="w-full rounded-lg block my-3 border-gray-300">
+        <input type="text" name="Subject" placeholder="Subject" class="w-full rounded-lg block my-3 border-gray-300" required>
       </div>
 
       <!-- Body Textarea -->
       <textarea name="Body" class="w-2/5 h-60 rounded-lg block mx-auto text-left border-gray-300 p-2 resize-none"
-        placeholder="Body"></textarea>
+        placeholder="Body" required></textarea>
 
       <!-- Submit Button -->
       <input type="submit" name="submit" value="Post"

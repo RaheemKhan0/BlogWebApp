@@ -1,44 +1,51 @@
 <%- include("partials/navbar.ejs") %>
-  <header class="bg-white shadow">
-    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <h1 class="text-center text-3xl font-bold tracking-tight text-gray-900">Posts</h1>
-    </div>
-  </header>
+<header class="bg-white shadow">
+  <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <h1 class="text-center text-3xl font-bold tracking-tight text-gray-900">Posts</h1>
+  </div>
+</header>
 
-  <div class="grid grid-cols-1 gap-4 grid-rows-2 md:grid-cols-2 md:grid-rows-2">
-    <div
-      class="ml-[40px] mt-[20px] border-r border-b border-l border-t border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-xl p-4 flex flex-col justify-between leading-normal sm:m-5">
-      <div class="mb-8">
-        <div class="text-gray-900 font-bold text-xl mb-2 border-b-4 border-gray-800">The Rise of AI in Everyday
-          Technology</div>
-        <p class="text-gray-700 text-base">
-          Artificial Intelligence (AI) is no longer a futuristic concept; it's an integral part of our daily lives. From
-          personalized recommendations on streaming platforms to voice assistants like Siri and Alexa, AI is
-          revolutionizing how we interact with technology. It helps businesses automate processes, improves customer
-          service with chatbots, and enhances data-driven decision-making. As AI continues to evolve, its impact will
-          only grow, unlocking new opportunities for innovation and making technology more intuitive and accessible for
-          everyone. Embracing AI will undoubtedly shape the future of how we live and work. </p>
-      </div>
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+  <!-- First post -->
+  <div class="ml-[40px] mt-[20px] border-r border-b border-l border-t border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-xl p-4 flex flex-col justify-between leading-normal sm:m-5">
+    <div class="mb-8">
+      <div class="text-gray-900 font-bold text-xl mb-2 border-b-4 border-gray-800">The Rise of AI in Everyday Technology</div>
+      <p class="text-gray-700 text-base">
+        Artificial Intelligence (AI) is no longer a futuristic concept; it's an integral part of our daily lives. From
+        personalized recommendations on streaming platforms to voice assistants like Siri and Alexa, AI is
+        revolutionizing how we interact with technology. It helps businesses automate processes, improves customer
+        service with chatbots, and enhances data-driven decision-making. As AI continues to evolve, its impact will
+        only grow, unlocking new opportunities for innovation and making technology more intuitive and accessible for
+        everyone. Embracing AI will undoubtedly shape the future of how we live and work.
+      </p>
     </div>
-    <div
-      class="mr-[40px] mt-[20px] border-r border-b border-l border-t border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-xl p-4 flex flex-col justify-between leading-normal sm:m-5">
-      <div class="mb-8">
-        <div class="text-gray-900 font-bold text-xl mb-2 border-b-4 border-gray-800">The Importance of Continuous
-          Learning in Tech</div>
-        <p class="text-gray-700 text-base">
-          In technology, staying updated is essential for success. New tools, languages, and frameworks are constantly
-          emerging, and embracing continuous learning helps professionals stay ahead. Whether through online courses,
-          tutorials, or community events like hackathons, ongoing education is key to adapting to industry changes. By
-          learning new skills and exploring innovative solutions, tech professionals can enhance their problem-solving
-          abilities and remain competitive in a fast-paced field. In tech, growth never stops—keep learning, and stay
-          ahead!
-        </p>
-      </div>
-    </div>
-
   </div>
 
+  <!-- Second post -->
+  <div class="mr-[40px] mt-[20px] border-r border-b border-l border-t border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-xl p-4 flex flex-col justify-between leading-normal sm:m-5">
+    <div class="mb-8">
+      <div class="text-gray-900 font-bold text-xl mb-2 border-b-4 border-gray-800">The Importance of Continuous Learning in Tech</div>
+      <p class="text-gray-700 text-base">
+        In technology, staying updated is essential for success. New tools, languages, and frameworks are constantly
+        emerging, and embracing continuous learning helps professionals stay ahead. Whether through online courses,
+        tutorials, or community events like hackathons, ongoing education is key to adapting to industry changes. By
+        learning new skills and exploring innovative solutions, tech professionals can enhance their problem-solving
+        abilities and remain competitive in a fast-paced field. In tech, growth never stops—keep learning, and stay ahead!
+      </p>
+    </div>
+  </div>
 
-  <div class="d-flex flex-column min-vh-50 mt-[220px]">
+  <!-- Looping through subjects -->
+  <% for (var i = 0; i < subject.length; i++) { %>
+    <div class="mr-[40px] mt-[20px] border-r border-b border-l border-t border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-xl p-4 flex flex-col justify-between leading-normal sm:m-5">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2 border-b-4 border-gray-800"><%= subject[i] %></div>
+        <p class="text-gray-700 text-base"><%= body[i] %></p>
+      </div>
+    </div>
+  <% } %>
 
-    <%- include("partials/footer.ejs") %>
+</div>
+
+<%- include("partials/footer.ejs") %>
+
